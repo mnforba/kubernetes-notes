@@ -29,8 +29,8 @@ $ cd eks-terraform-setup
 # install terraform using a bash shell script
 $ sh terraform-install.sh
 # OR install terraform by running the commands below
-$ wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
-$ sudo unzip terraform_0.12.26_linux_amd64.zip -d /usr/local/bin/
+$ wget  https://releases.hashicorp.com/terraform/1.3.9/terraform_1.3.9_linux_amd64.zip
+$ sudo unzip terraform_1.3.9_linux_amd64.zip -d /usr/local/bin/
 # Export terraform binary path temporally
 $ export PATH=$PATH:/usr/local/bin
 # Add path permanently for current user.By Exporting path in .bashrc file at end of file.
@@ -41,8 +41,8 @@ $ source ~/.bashrc
 # run the scripts https://github.com/mylandmarktechs/eks-terraform-setup/blob/main/terraform-install.sh
 
 $ sudo yum install wget unzip -y
-$ wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
-$ sudo unzip terraform_0.12.26_linux_amd64.zip -d /usr/local/bin/
+$ wget  https://releases.hashicorp.com/terraform/1.3.9/terraform_1.3.9_linux_amd64.zip
+$ sudo unzip terraform_1.3.9_linux_amd64.zip -d /usr/local/bin/
 # Export terraform binary path temporally
 $ export PATH=$PATH:/usr/local/bin
 # Add path permanently for current user.By Exporting path in .bashrc file at end of file.
@@ -76,8 +76,8 @@ $ terraform apply --auto-approve
 $ terraform destroy --auto-approve
 
 ## create the kubeconfig file  
-$ mkdir .kube/ 
-$ vi .kube/config
+$ mkdir ~/.kube/ 
+$ vi ~/.kube/config && copy the config content 
 $ kubectl get pod
 $ #!/bin/bash 
 $ sh iam-authenticator.sh 
