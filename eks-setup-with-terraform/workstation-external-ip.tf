@@ -14,5 +14,6 @@ data "http" "workstation-external-ip" {
 
 # Override with variable or hardcoded value if necessary
 locals {
-  workstation-external-cidr = "${chomp(data.http.workstation-external-ip.body)}/32"
+  workstation-external-ip = data.http.workstation-external-ip.content
+  workstation-external-cidr = "${chomp(local.workstation-external-ip)}/32"
 }
